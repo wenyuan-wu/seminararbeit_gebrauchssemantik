@@ -1,4 +1,4 @@
-# Seminararberit Gebrauchssemantik
+# Seminararbeit Gebrauchssemantik
 
 **Titel**: Datenschutz und Überwachungskapitalismus - eine diachrone Analyse von semantischen Raumveränderungen
 
@@ -11,13 +11,13 @@ Dieses Repository enthält die in der Seminararbeit verwendeten Quellcodes.
 ![Verlaufskurve](./images/dwds_verlaufskurven_datenschutz_überwachung.png)
 
 Nach der Enthüllungen von Massenüberwachungsprogramm der National Security Agency (NSA) und Facebook-Datenskandal steht 
-die Datenschutz von nicht nur der Regirung sondern auch der Tech-Giganten viel mehr in Diskussion. 
+die Datenschutz nicht nur von der Regierung sondern auch von der Tech-Giganten viel mehr in Diskussion. 
 Viele beginnen sich Sorgen um ihre Privatsphäre zu machen, die durch die rasante Entwicklung von Technologien
 wie Gesichtserkennung oder Datenerfassung von Smartphones oder Online-Diensten stark beeinträchtigt wird. 
 Dieses Diagramm von DWDS-Wortverlaufskurve zeigt sich, dass es eine starke Frequenzkorrelation zwischen
 die Wörter „Datenschutz“ und „Überwachung“ im Zeitraum von 1995 bis 2015 gibt. In dieser Seminararbeit handelt es davon, 
-wie sich die semantische Räume von einige bestimmte Ansdrücke über Technologie und Datenschutz in Lauf der Zeit verändern,
-mit dem Hilfe der Erstellung und Forschung von Word2Vec word embeddings Modellen, die durch Korpora vom Projeck Deutscher 
+wie sich die **semantische Räume** von einige bestimmte Ausdrücke über Technologie und Datenschutz im Lauf der Zeit verändern,
+mit dem Hilfe der Erstellung und Forschung von **Word2Vec** word embeddings Modellen, die durch Korpora vom Projekt Deutscher 
 Wortschatz jedes Jahr von 1995 bis 2015 trainiert. 
 
 
@@ -59,8 +59,8 @@ Das Quellenmaterial stammt von Nachrichtenseiten (meist über RSS-Feeds).
 
 1. Das word2vec-Modell eines jeden Jahres trainieren (2/20)
 2. Repräsentative Wörter wählen und ihre semantische Räumen vergleichen
-3. Plot von Ergebnisse erstellen / Visualisieren
-4. Ergebnisse recherichen und interpretieren
+3. Plot von Ergebnisse erstellen / visualisieren
+4. Ergebnisse recherchieren und interpretieren
 
 Modelle erstellt von Korpus 1995:
 ```

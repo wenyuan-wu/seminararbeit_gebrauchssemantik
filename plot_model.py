@@ -1,7 +1,7 @@
 import gensim.models
 import io
 
-model = gensim.models.Word2Vec.load('models/corpus-model')
+model = gensim.models.Word2Vec.load('models/2015-model')
 word_vectors = model.wv
 
 # Vector file, `\t` seperated the vectors and `\n` seperate the words
@@ -10,7 +10,7 @@ word_vectors = model.wv
 0.2\t0.1\t5.0\t0.2
 0.4\t0.1\t7.0\t0.8
 """
-out_v = io.open('vecs.tsv', 'w', encoding='utf-8')
+out_v = io.open('models/2015-vecs.tsv', 'w', encoding='utf-8')
 
 # Meta data file, `\n` seperated word
 """
@@ -18,7 +18,7 @@ token1
 token2
 token3
 """
-out_m = io.open('meta.tsv', 'w', encoding='utf-8')
+out_m = io.open('models/2015-meta.tsv', 'w', encoding='utf-8')
 
 # Write meta file and vector file
 for index in range(len(word_vectors.index2word)):

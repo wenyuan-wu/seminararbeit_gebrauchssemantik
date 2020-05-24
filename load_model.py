@@ -1,6 +1,6 @@
 import gensim.models
 
-model = gensim.models.Word2Vec.load('models/2015-model')
+model = gensim.models.Word2Vec.load('models/1995-model')
 word_vectors = model.wv
 
 result = word_vectors.most_similar(positive=['frau', 'könig'], negative=['mann'])

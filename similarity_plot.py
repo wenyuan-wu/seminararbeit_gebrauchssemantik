@@ -32,7 +32,7 @@ def get_simi_dict(word, word_list):
     return simi_dict
 
 
-def plot_data(simi_dict, word):
+def plot_data(simi_dict, word, ann='right'):
     df = pd.DataFrame.from_dict(simi_dict)
     x_year = df.columns.values.tolist()
     x = np.arange(len(x_year))
@@ -43,10 +43,16 @@ def plot_data(simi_dict, word):
         ax.plot(x, y, 'o-', color=next(color), alpha=1.0, label=idx)
     ax.grid(axis='x', color='0.95')
     for line, name in zip(ax.lines, df.index.values.tolist()):
-        y = line.get_ydata()[-1]
-        ax.annotate(name, xy=(1, y), xytext=(6, 0), color=line.get_color(),
-                    xycoords=ax.get_yaxis_transform(), textcoords="offset points",
-                    size=12, va="center")
+        if ann == 'left':
+            y = line.get_ydata()[0]
+            ax.annotate(name, xy=(0, y), xytext=(-25, 0), color=line.get_color(),
+                        xycoords=ax.get_yaxis_transform(), textcoords="offset points",
+                        size=12, va="center")
+        elif ann == 'right':
+            y = line.get_ydata()[-1]
+            ax.annotate(name, xy=(1, y), xytext=(6, 0), color=line.get_color(),
+                        xycoords=ax.get_yaxis_transform(), textcoords="offset points",
+                        size=12, va="center")
     ax.set_ylabel('Distribution per year', size=12)
     ax.set_title('Similarity with word "{}"'.format(word), size=12)
     ax.set_xticks(x)
@@ -64,8 +70,8 @@ def main():
 
     simi_dict_1995_d = get_simi_dict('datenschutz', word_list_1995_d)
     simi_dict_2015_d = get_simi_dict('datenschutz', word_list_2015_d)
-    plot_data(simi_dict_1995_d, 'datenschutz')
-    plot_data(simi_dict_2015_d, 'datenschutz')
+    plot_data(simi_dict_1995_d, 'datenschutz', ann='right')
+    plot_data(simi_dict_2015_d, 'datenschutz', ann='left')
 
     word_list_1995_p = ['unversehrtheit', 'beschneidung', 'verstrickung', 'lebensumstände', 'eignung',
                         'schweigepflicht', 'einschüchterung', 'besessenheit', 'friedenspolitik', 'eigenart']
@@ -74,8 +80,8 @@ def main():
 
     simi_dict_1995_p = get_simi_dict('privatsphäre', word_list_1995_p)
     simi_dict_2015_p = get_simi_dict('privatsphäre', word_list_2015_p)
-    plot_data(simi_dict_1995_p, 'privatsphäre')
-    plot_data(simi_dict_2015_p, 'privatsphäre')
+    plot_data(simi_dict_1995_p, 'privatsphäre', ann='right')
+    plot_data(simi_dict_2015_p, 'privatsphäre', ann='left')
 
 
 if __name__ == '__main__':

@@ -132,6 +132,12 @@ regeln: 0.6016
 ```
 Siehe Auch: Visualisierung von Tensor board
 
+
+```
+$ grep -Pci "Datenschutz" data/sent/*.txt
+$ grep -Pci "Privatsphäre" data/sent/*.txt
+```
+
 ## Probleme
 1. sinnvolle/repräsentative Wörter wählen
 

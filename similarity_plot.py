@@ -67,21 +67,27 @@ def main():
                       'passus', 'asylkompromiß', 'kohlepfennig', 'todesstoß', 'bürgerentscheid']
     word_list_2015_d = ['richtlinien', 'suchmaschinen', 'netzneutralität', 'infrastrukturen', 'provider',
                       'webseiten', 'regeln', 'transparenz', 'compliance', 'rechtliche']
-
+    word_list_all_d = ['jugendschutz', 'datensicherheit', 'tierschutz', 'umweltschutz', 'klimaschutz',
+                       'anlegerschutz', 'opferschutz', 'bürokratieabbau', 'kinderschutz', 'arbeitsrecht']
     simi_dict_1995_d = get_simi_dict('datenschutz', word_list_1995_d)
     simi_dict_2015_d = get_simi_dict('datenschutz', word_list_2015_d)
+    simi_dict_all_d = get_simi_dict('datenschutz', word_list_all_d)
     plot_data(simi_dict_1995_d, 'datenschutz', ann='right')
     plot_data(simi_dict_2015_d, 'datenschutz', ann='left')
+    plot_data(simi_dict_all_d, 'datenschutz', ann='right')
 
     word_list_1995_p = ['unversehrtheit', 'beschneidung', 'verstrickung', 'lebensumstände', 'eignung',
                         'schweigepflicht', 'einschüchterung', 'besessenheit', 'friedenspolitik', 'eigenart']
     word_list_2015_p = ['agb', 'dienste', 'webseiten', 'cookies', 'posts',
                         'postings', 'netzwerke', 'bedürfnisse', 'suchmaschinen', 'inhalte']
-
+    word_list_all_p = ['intimsphäre', 'anonymität', 'menschenwürde', 'grundrechte', 'redefreiheit',
+                       'pressefreiheit', 'freiheitsrechte', 'unversehrtheit', 'urheberrechte', 'berufsfreiheit']
     simi_dict_1995_p = get_simi_dict('privatsphäre', word_list_1995_p)
     simi_dict_2015_p = get_simi_dict('privatsphäre', word_list_2015_p)
+    simi_dict_all_p = get_simi_dict('privatsphäre', word_list_all_p)
     plot_data(simi_dict_1995_p, 'privatsphäre', ann='right')
     plot_data(simi_dict_2015_p, 'privatsphäre', ann='left')
+    plot_data(simi_dict_all_p, 'privatsphäre', ann='right')
 
 
 if __name__ == '__main__':

@@ -57,15 +57,25 @@ def plot_data(simi_dict, word):
 
 
 def main():
-    word_list_1995 = ['lärmschutz', 'klimaschutz', 'kahlschlag', 'polizeieinsatz', 'schulordnung',
+    word_list_1995_d = ['lärmschutz', 'klimaschutz', 'kahlschlag', 'polizeieinsatz', 'schulordnung',
                       'passus', 'asylkompromiß', 'kohlepfennig', 'todesstoß', 'bürgerentscheid']
-    word_list_2015 = ['richtlinien', 'suchmaschinen', 'netzneutralität', 'infrastrukturen', 'provider',
+    word_list_2015_d = ['richtlinien', 'suchmaschinen', 'netzneutralität', 'infrastrukturen', 'provider',
                       'webseiten', 'regeln', 'transparenz', 'compliance', 'rechtliche']
 
-    simi_dict_1995 = get_simi_dict('datenschutz', word_list_1995)
-    simi_dict_2015 = get_simi_dict('datenschutz', word_list_2015)
-    plot_data(simi_dict_1995, 'datenschutz')
-    plot_data(simi_dict_2015, 'datenschutz')
+    simi_dict_1995_d = get_simi_dict('datenschutz', word_list_1995_d)
+    simi_dict_2015_d = get_simi_dict('datenschutz', word_list_2015_d)
+    plot_data(simi_dict_1995_d, 'datenschutz')
+    plot_data(simi_dict_2015_d, 'datenschutz')
+
+    word_list_1995_p = ['unversehrtheit', 'beschneidung', 'verstrickung', 'lebensumstände', 'eignung',
+                        'schweigepflicht', 'einschüchterung', 'besessenheit', 'friedenspolitik', 'eigenart']
+    word_list_2015_p = ['agb', 'dienste', 'webseiten', 'cookies', 'posts',
+                        'postings', 'netzwerke', 'bedürfnisse', 'suchmaschinen', 'inhalte']
+
+    simi_dict_1995_p = get_simi_dict('privatsphäre', word_list_1995_p)
+    simi_dict_2015_p = get_simi_dict('privatsphäre', word_list_2015_p)
+    plot_data(simi_dict_1995_p, 'privatsphäre')
+    plot_data(simi_dict_2015_p, 'privatsphäre')
 
 
 if __name__ == '__main__':
